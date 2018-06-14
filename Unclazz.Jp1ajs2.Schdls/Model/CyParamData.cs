@@ -4,14 +4,14 @@ using Unclazz.Jp1ajs2.Unitdef;
 
 namespace Unclazz.Jp1ajs2.Schdls.Model
 {
-    public class CyParamData
+    public class CyParamData : ParamDataBase
     {
         public static CyParamData Create(ITuple value)
         {
             return new CyParamData(value ?? throw new ArgumentNullException(nameof(value)));
         }
         
-        CyParamData(ITuple value)
+        CyParamData(ITuple value) : base(value.ToString())
         {
             Interval = int.Parse(value[0]);
             switch (value[1])
@@ -35,8 +35,8 @@ namespace Unclazz.Jp1ajs2.Schdls.Model
             switch (Unit)
             {
                 case CyUnits.Day: buff.Append("日"); break;
-                case CyUnits.Month: buff.Append("月"); break;
-                case CyUnits.Week: buff.Append("週"); break;
+                case CyUnits.Month: buff.Append("ヶ月"); break;
+                case CyUnits.Week: buff.Append("週間"); break;
                 case CyUnits.Year: buff.Append("年"); break;
             }
             return buff.Append("ごと").ToString();

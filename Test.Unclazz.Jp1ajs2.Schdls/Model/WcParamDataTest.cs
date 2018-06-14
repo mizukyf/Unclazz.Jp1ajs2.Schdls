@@ -2,7 +2,7 @@
 using System;
 using Unclazz.Jp1ajs2.Schdls.Model;
 
-namespace Test.Unclazz.Jp1ajs2.Schdls
+namespace Test.Unclazz.Jp1ajs2.Schdls.Model
 {
     [TestFixture()]
     public class WcParamDataTest

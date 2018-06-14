@@ -30,9 +30,16 @@
     <Reference Include="nunit.framework">
       <HintPath>..\packages\NUnit.3.10.1\lib\net45\nunit.framework.dll</HintPath>
     </Reference>
+    <Reference Include="Unclazz.Parsec">
+      <HintPath>..\packages\Unclazz.Parsec.1.4.1\lib\net47\Unclazz.Parsec.dll</HintPath>
+    </Reference>
+    <Reference Include="Unclazz.Jp1ajs2.Unitdef">
+      <HintPath>..\packages\Unclazz.Jp1ajs2.Unitdef.1.7.4\lib\net47\Unclazz.Jp1ajs2.Unitdef.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="WcParamDataTest.cs" />
+    <Compile Include="Model\CyParamDataTest.cs" />
+    <Compile Include="Model\WcParamDataTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Unclazz.Jp1ajs2.Schdls\Unclazz.Jp1ajs2.Schdls.csproj">
@@ -42,6 +49,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Model\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
