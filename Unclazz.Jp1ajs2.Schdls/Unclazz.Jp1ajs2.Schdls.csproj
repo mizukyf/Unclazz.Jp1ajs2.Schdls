@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{C407FD70-A437-4DDF-A53E-85EBC21F4DAB}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Unclazz.Jp1ajs2.Schdls</RootNamespace>
+    <AssemblyName>jp1schdls</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ExternalConsole>true</ExternalConsole>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ExternalConsole>true</ExternalConsole>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="Unclazz.Parsec">
+      <HintPath>..\packages\Unclazz.Parsec.1.4.1\lib\net47\Unclazz.Parsec.dll</HintPath>
+    </Reference>
+    <Reference Include="Unclazz.Jp1ajs2.Unitdef">
+      <HintPath>..\packages\Unclazz.Jp1ajs2.Unitdef.1.7.4\lib\net47\Unclazz.Jp1ajs2.Unitdef.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SdRelParamsExtensions.cs" />
+    <Compile Include="Model\CyParamData.cs" />
+    <Compile Include="Model\StParamData.cs" />
+    <Compile Include="Model\RuleData.cs" />
+    <Compile Include="Model\JobnetData.cs" />
+    <Compile Include="Model\WtParamData.cs" />
+    <Compile Include="Model\WcParamData.cs" />
+    <Compile Include="Model\SdParamData.cs" />
+    <Compile Include="Model\EdParamData.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Model\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>
