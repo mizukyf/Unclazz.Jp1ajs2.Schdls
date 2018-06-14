@@ -32,7 +32,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Test.cs" />
+    <Compile Include="WcParamDataTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Unclazz.Jp1ajs2.Schdls\Unclazz.Jp1ajs2.Schdls.csproj">

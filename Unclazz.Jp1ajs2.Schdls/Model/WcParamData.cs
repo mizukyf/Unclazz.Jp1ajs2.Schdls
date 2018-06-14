@@ -2,7 +2,7 @@
 
 namespace Unclazz.Jp1ajs2.Schdls.Model
 {
-    public class WcParamData
+    public class WcParamData : ParamDataBase
     {
         public static WcParamData Create(string value)
         {
@@ -10,7 +10,7 @@ namespace Unclazz.Jp1ajs2.Schdls.Model
         }
         public static WcParamData Default { get; } = new WcParamData("no");
 
-        WcParamData(string value)
+        WcParamData(string value) : base(value)
         {
             NoWait = value == "no";
             Unlimited = value == "un";

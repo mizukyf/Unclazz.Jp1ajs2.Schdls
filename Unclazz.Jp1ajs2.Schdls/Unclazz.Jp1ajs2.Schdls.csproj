@@ -49,6 +49,7 @@
     <Compile Include="Model\WcParamData.cs" />
     <Compile Include="Model\SdParamData.cs" />
     <Compile Include="Model\EdParamData.cs" />
+    <Compile Include="Model\ParamDataBase.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
