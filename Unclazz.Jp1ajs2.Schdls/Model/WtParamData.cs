@@ -2,7 +2,7 @@
 
 namespace Unclazz.Jp1ajs2.Schdls.Model
 {
-    public class WtParamData
+    public class WtParamData : ParamDataBase
     {
         public static WtParamData Create(string value)
         {
@@ -10,19 +10,21 @@ namespace Unclazz.Jp1ajs2.Schdls.Model
         }
         public static WtParamData Default { get; } = new WtParamData("no");
 
-        WtParamData(string value)
+        WtParamData(string value) : base(value)
         {
             NoWait = value == "no";
             Unlimited = value == "un";
             if (NoWait || Unlimited) return;
             if (value.IndexOf(':') != -1)
             {
+                Relative = false;
                 var hhmm = value.Split(':');
                 Hour = int.Parse(hhmm[0]);
                 Minute = int.Parse(hhmm[1]);
             }
             else
             {
+                Relative = true;
                 var min = int.Parse(value);
                 Hour = min / 60;
                 Minute = min % 60;
