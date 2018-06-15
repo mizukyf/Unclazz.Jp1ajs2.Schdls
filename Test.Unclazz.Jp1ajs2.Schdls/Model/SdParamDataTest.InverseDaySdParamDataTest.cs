@@ -393,5 +393,165 @@ namespace Test.Unclazz.Jp1ajs2.Schdls.Model
                 Assert.That(casted.ToString(), Is.EqualTo("当月の相対日末日"));
             }
         }
+            [Test()]
+            public void Create_Case63_b()
+            {
+                // Arrange
+                // Act
+                var pd = SdParamData.Create("b");
+                var casted = pd as SdParamData.InverseDaySdParamData;
+
+                // Assert
+                Assert.That(casted.RawData, Is.EqualTo("b"));
+                Assert.That(casted.Year, Is.EqualTo(0));
+                Assert.That(casted.Month, Is.EqualTo(0));
+                Assert.That(casted.Day, Is.EqualTo(0));
+                Assert.That(casted.Unit, Is.EqualTo(SdParamData.InverseDaySdParamData.DayUnits.Absolute));
+                Assert.That(casted.ToString(), Is.EqualTo("当月末"));
+            }
+        [Test()]
+        public void Create_Case71_yyyymmb_plus()
+        {
+            // Arrange
+            // Act
+            var pd = SdParamData.Create("2018/06/+b");
+            var casted = pd as SdParamData.InverseDaySdParamData;
+
+            // Assert
+            Assert.That(casted.RawData, Is.EqualTo("2018/06/+b"));
+            Assert.That(casted.Year, Is.EqualTo(2018));
+            Assert.That(casted.Month, Is.EqualTo(6));
+            Assert.That(casted.Day, Is.EqualTo(0));
+            Assert.That(casted.Unit, Is.EqualTo(SdParamData.InverseDaySdParamData.DayUnits.Relative));
+            Assert.That(casted.ToString(), Is.EqualTo("2018年6月の相対日末日"));
+        }
+        [Test()]
+        public void Create_Case72_mmb_plus()
+        {
+            // Arrange
+            // Act
+            var pd = SdParamData.Create("06/+b");
+            var casted = pd as SdParamData.InverseDaySdParamData;
+
+            // Assert
+            Assert.That(casted.RawData, Is.EqualTo("06/+b"));
+            Assert.That(casted.Year, Is.EqualTo(0));
+            Assert.That(casted.Month, Is.EqualTo(6));
+            Assert.That(casted.Day, Is.EqualTo(0));
+            Assert.That(casted.Unit, Is.EqualTo(SdParamData.InverseDaySdParamData.DayUnits.Relative));
+            Assert.That(casted.ToString(), Is.EqualTo("6月の相対日末日"));
+        }
+        [Test()]
+        public void Create_Case73_b_plus()
+        {
+            // Arrange
+            // Act
+            var pd = SdParamData.Create("+b");
+            var casted = pd as SdParamData.InverseDaySdParamData;
+
+            // Assert
+            Assert.That(casted.RawData, Is.EqualTo("+b"));
+            Assert.That(casted.Year, Is.EqualTo(0));
+            Assert.That(casted.Month, Is.EqualTo(0));
+            Assert.That(casted.Day, Is.EqualTo(0));
+            Assert.That(casted.Unit, Is.EqualTo(SdParamData.InverseDaySdParamData.DayUnits.Relative));
+            Assert.That(casted.ToString(), Is.EqualTo("当月の相対日末日"));
+        }
+        [Test()]
+        public void Create_Case81_yyyymb_star()
+        {
+            // Arrange
+            // Act
+            var pd = SdParamData.Create("2018/6/*b");
+            var casted = pd as SdParamData.InverseDaySdParamData;
+
+            // Assert
+            Assert.That(casted.RawData, Is.EqualTo("2018/6/*b"));
+            Assert.That(casted.Year, Is.EqualTo(2018));
+            Assert.That(casted.Month, Is.EqualTo(6));
+            Assert.That(casted.Day, Is.EqualTo(0));
+            Assert.That(casted.Unit, Is.EqualTo(SdParamData.InverseDaySdParamData.DayUnits.BusinessDay));
+            Assert.That(casted.ToString(), Is.EqualTo("2018年6月の運用日末日"));
+        }
+        [Test()]
+        public void Create_Case82_mmb_star()
+        {
+            // Arrange
+            // Act
+            var pd = SdParamData.Create("06/*b");
+            var casted = pd as SdParamData.InverseDaySdParamData;
+
+            // Assert
+            Assert.That(casted.RawData, Is.EqualTo("06/*b"));
+            Assert.That(casted.Year, Is.EqualTo(0));
+            Assert.That(casted.Month, Is.EqualTo(6));
+            Assert.That(casted.Day, Is.EqualTo(0));
+            Assert.That(casted.Unit, Is.EqualTo(SdParamData.InverseDaySdParamData.DayUnits.BusinessDay));
+            Assert.That(casted.ToString(), Is.EqualTo("6月の運用日末日"));
+        }
+        [Test()]
+        public void Create_Case83_b_star()
+        {
+            // Arrange
+            // Act
+            var pd = SdParamData.Create("*b");
+            var casted = pd as SdParamData.InverseDaySdParamData;
+
+            // Assert
+            Assert.That(casted.RawData, Is.EqualTo("*b"));
+            Assert.That(casted.Year, Is.EqualTo(0));
+            Assert.That(casted.Month, Is.EqualTo(0));
+            Assert.That(casted.Day, Is.EqualTo(0));
+            Assert.That(casted.Unit, Is.EqualTo(SdParamData.InverseDaySdParamData.DayUnits.BusinessDay));
+            Assert.That(casted.ToString(), Is.EqualTo("当月の運用日末日"));
+        }
+        [Test()]
+        public void Create_Case91_yyyymmb_at()
+        {
+            // Arrange
+            // Act
+            var pd = SdParamData.Create("2018/06/@b");
+            var casted = pd as SdParamData.InverseDaySdParamData;
+
+            // Assert
+            Assert.That(casted.RawData, Is.EqualTo("2018/06/@b"));
+            Assert.That(casted.Year, Is.EqualTo(2018));
+            Assert.That(casted.Month, Is.EqualTo(6));
+            Assert.That(casted.Day, Is.EqualTo(0));
+            Assert.That(casted.Unit, Is.EqualTo(SdParamData.InverseDaySdParamData.DayUnits.NonBusinessDay));
+            Assert.That(casted.ToString(), Is.EqualTo("2018年6月の休業日末日"));
+        }
+        [Test()]
+        public void Create_Case92_mb_at()
+        {
+            // Arrange
+            // Act
+            var pd = SdParamData.Create("6/@b");
+            var casted = pd as SdParamData.InverseDaySdParamData;
+
+            // Assert
+            Assert.That(casted.RawData, Is.EqualTo("6/@b"));
+            Assert.That(casted.Year, Is.EqualTo(0));
+            Assert.That(casted.Month, Is.EqualTo(6));
+            Assert.That(casted.Day, Is.EqualTo(0));
+            Assert.That(casted.Unit, Is.EqualTo(SdParamData.InverseDaySdParamData.DayUnits.NonBusinessDay));
+            Assert.That(casted.ToString(), Is.EqualTo("6月の休業日末日"));
+        }
+        [Test()]
+        public void Create_Case93_b_at()
+        {
+            // Arrange
+            // Act
+            var pd = SdParamData.Create("@b");
+            var casted = pd as SdParamData.InverseDaySdParamData;
+
+            // Assert
+            Assert.That(casted.RawData, Is.EqualTo("@b"));
+            Assert.That(casted.Year, Is.EqualTo(0));
+            Assert.That(casted.Month, Is.EqualTo(0));
+            Assert.That(casted.Day, Is.EqualTo(0));
+            Assert.That(casted.Unit, Is.EqualTo(SdParamData.InverseDaySdParamData.DayUnits.NonBusinessDay));
+            Assert.That(casted.ToString(), Is.EqualTo("当月の休業日末日"));
+        }
     }
 }
