@@ -50,6 +50,8 @@
     <Compile Include="Model\SdParamData.cs" />
     <Compile Include="Model\EdParamData.cs" />
     <Compile Include="Model\ParamDataBase.cs" />
+    <Compile Include="Model\RunConditionData.cs" />
+    <Compile Include="Model\FdParamData.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

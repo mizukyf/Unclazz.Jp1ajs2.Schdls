@@ -1,14 +1,14 @@
 ﻿using System;
 namespace Unclazz.Jp1ajs2.Schdls.Model
 {
-    public class EdParamData
+    public class EdParamData : ParamDataBase
     {
         public static EdParamData Create(string value)
         {
             return new EdParamData(value ?? throw new ArgumentNullException(nameof(value)));
         }
 
-        EdParamData(string value)
+        EdParamData(string value) : base(value)
         {
             var values = value.Split('/');
             Year = int.Parse(values[0]);
