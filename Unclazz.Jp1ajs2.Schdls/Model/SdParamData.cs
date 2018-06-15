@@ -33,9 +33,9 @@ namespace Unclazz.Jp1ajs2.Schdls.Model
             var m1 = _re1.Match(valueRest);
             if (m1.Success)
             {
-                var valueDd = m0.Groups[2].Value;
+                var valueDd = m1.Groups[2].Value;
                 var day = valueDd == string.Empty ? 0 : int.Parse(valueDd);
-                return new InverseDaySdParamData(value, valueYyyy, valueMm, day, m0.Groups[1].Value);
+                return new InverseDaySdParamData(value, valueYyyy, valueMm, day, m1.Groups[1].Value);
             }
 
             var m2 = _re2.Match(valueRest);

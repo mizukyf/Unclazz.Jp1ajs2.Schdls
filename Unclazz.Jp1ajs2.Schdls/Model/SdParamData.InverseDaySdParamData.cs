@@ -17,6 +17,7 @@ namespace Unclazz.Jp1ajs2.Schdls.Model
 
                 if (Year > 0) buff.Append(Year).Append("年");
                 if (Month > 0) buff.Append(Month).Append("月");
+                else buff.Append("当月");
 
                 switch (Unit)
                 {
@@ -26,7 +27,7 @@ namespace Unclazz.Jp1ajs2.Schdls.Model
                     case DayUnits.NonBusinessDay: buff.Append("の休業日末日"); break;
                 }
 
-                if (Day < 0) buff.Append("の").Append(Day).Append("日前");
+                if (Day < 0) buff.Append("の").Append(Day * -1).Append("日前");
 
                 return buff.ToString();
             }
