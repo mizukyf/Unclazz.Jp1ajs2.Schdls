@@ -38,8 +38,9 @@ namespace Unclazz.Jp1ajs2.Schdls.Model
                 if (Month > 0) buff.Append(Month).Append("月");
 
 
+                if (Relative) buff.Append("相対日の");
                 if (Number == -1) buff.Append("最終の");
-                if (Number == 0)
+                else if (Number == 0)
                 {
                     buff.Append(Month > 0 ? "第1" : "実行登録日直近の");
                 }

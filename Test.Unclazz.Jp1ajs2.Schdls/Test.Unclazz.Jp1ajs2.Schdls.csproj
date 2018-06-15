@@ -49,6 +49,7 @@
     <Compile Include="Model\SdParamDataTest.UndefinedSdParamDataTest.cs" />
     <Compile Include="Model\SdParamDataTest.DaySdParamDataTest.cs" />
     <Compile Include="Model\SdParamDataTest.InverseDaySdParamDataTest.cs" />
+    <Compile Include="Model\SdParamDataTest.DayOfWeekSdParamDataTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Unclazz.Jp1ajs2.Schdls\Unclazz.Jp1ajs2.Schdls.csproj">

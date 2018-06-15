@@ -10,7 +10,7 @@ namespace Unclazz.Jp1ajs2.Schdls.Model
 
         static readonly Regex _re0 = new Regex(@"^([+*@])?(\d+)$");
         static readonly Regex _re1 = new Regex(@"^([+*@])?b(-\d+)?$");
-        static readonly Regex _re2 = new Regex(@"^(\+)?(su|mo|tu|we|th|fr|sa)(:([nb]))?$");
+        static readonly Regex _re2 = new Regex(@"^(\+)?(su|mo|tu|we|th|fr|sa)(:(\d+|b))?$");
 
         public static SdParamData Create(string value)
         {
