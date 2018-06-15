@@ -2,7 +2,7 @@
 
 namespace Unclazz.Jp1ajs2.Schdls.Model
 {
-    public class StParamData
+    public class StParamData : ParamDataBase
     {
         public static StParamData Create(string value)
         {
@@ -11,7 +11,7 @@ namespace Unclazz.Jp1ajs2.Schdls.Model
 
         public static StParamData Default { get; } = new StParamData("+00:00");
 
-        StParamData(string value)
+        StParamData(string value) : base(value)
         {
             Relative = value.StartsWith("+");
             var hhmm = (Relative ? value.Substring(1) : value).Split(':');

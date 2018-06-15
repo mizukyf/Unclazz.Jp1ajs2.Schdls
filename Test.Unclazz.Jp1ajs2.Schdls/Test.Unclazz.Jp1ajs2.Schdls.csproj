@@ -43,6 +43,7 @@
     <Compile Include="Model\WtParamDataTest.cs" />
     <Compile Include="Model\FdParamDataTest.cs" />
     <Compile Include="Model\EdParamDataTest.cs" />
+    <Compile Include="Model\StParamDataTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Unclazz.Jp1ajs2.Schdls\Unclazz.Jp1ajs2.Schdls.csproj">
