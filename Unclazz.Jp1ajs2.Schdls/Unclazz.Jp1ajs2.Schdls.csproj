@@ -52,6 +52,12 @@
     <Compile Include="Model\ParamDataBase.cs" />
     <Compile Include="Model\RunConditionData.cs" />
     <Compile Include="Model\FdParamData.cs" />
+    <Compile Include="Model\SdParamData.InverseDaySdParamData.cs" />
+    <Compile Include="Model\SdParamData.DayOfWeekSdParamData.cs" />
+    <Compile Include="Model\SdParamData.DaySdParamData.cs" />
+    <Compile Include="Model\SdParamData.EntrySdParamData.cs" />
+    <Compile Include="Model\SdParamData.UndefinedSdParamData.cs" />
+    <Compile Include="Model\SdParamData.YearMonthSdParamData.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

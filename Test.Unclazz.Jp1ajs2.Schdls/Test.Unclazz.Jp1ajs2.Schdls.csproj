@@ -44,6 +44,10 @@
     <Compile Include="Model\FdParamDataTest.cs" />
     <Compile Include="Model\EdParamDataTest.cs" />
     <Compile Include="Model\StParamDataTest.cs" />
+    <Compile Include="Model\SdParamDataTest.cs" />
+    <Compile Include="Model\SdParamDataTest.EntrySdParamDataTest.cs" />
+    <Compile Include="Model\SdParamDataTest.UndefinedSdParamDataTest.cs" />
+    <Compile Include="Model\SdParamDataTest.DaySdParamDataTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Unclazz.Jp1ajs2.Schdls\Unclazz.Jp1ajs2.Schdls.csproj">
