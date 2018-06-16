@@ -14,14 +14,17 @@ namespace Unclazz.Jp1ajs2.Schdls
             if (args.Length == 0)
             {
                 Console.WriteLine("USAGE: JP1SCHDLS.EXE ファイル名 [エンコード名]");
+                Environment.Exit(0);
             }
             try {
                 new MainClass().Execute(args[0], args.Length > 1 
                 ? Encoding.GetEncoding(args[1]) : Encoding.Default);
+                Environment.Exit(0);
             } 
             catch (Exception ex)
             {
                 Console.Error.WriteLine(ex);
+                Environment.Exit(1);
             }
         }
 
