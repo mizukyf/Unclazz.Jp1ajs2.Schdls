@@ -13,7 +13,7 @@ namespace Unclazz.Jp1ajs2.Schdls.Model
         public RunConditionData RunCondition { get; set; }
         public bool HasSubSchedules { get; set; }
         public IList<RuleData> ScheduleRules { get; } = new List<RuleData>();
-        public EdParamData EdParam { get; }
-        public int FixedDuration { get; }
+        public EdParamData EdParam { get; set; }
+        public FdParamData FdParam { get; set; }
     }
 }
